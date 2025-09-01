@@ -49,7 +49,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Music creator, developer, solopreneur & model car lover.</>,
   featured: {
     display: true,
     title: (
