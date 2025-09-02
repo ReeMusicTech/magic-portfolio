@@ -8,7 +8,7 @@ const person: Person = {
   role: "Music curator",
   avatar: "/images/avatar.jpg",
   email: "ricardo.aya@bido.app",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/Mexico_City", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Spanish", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -104,6 +104,7 @@ const about: About = {
         business acumen, legal precision, and creative insight — not merely delivering
         music, but shaping how it enhances customer experience and brand identity.
       </>
+      
     ),
   },
   work: {
