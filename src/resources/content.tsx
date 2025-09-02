@@ -24,12 +24,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/ReeMusicTech",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/ricardo-aya-47715520/",
   },
   {
     name: "Threads",
@@ -95,9 +95,14 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        He is a forward-thinking executive who seamlessly integrates music, technology,
+        and legal expertise to drive innovation in the commercial audio space. With a
+        strategic focus on AI-generated music, intellectual property efficiency,
+        and brand-aligned soundscapes, he consistently stays ahead of industry trends. 
+        Through Bido, he is building a scalable, rights-conscious music platform tailored
+        for retail, hospitality, and commercial environments. His approach combines
+        business acumen, legal precision, and creative insight — not merely delivering
+        music, but shaping how it enhances customer experience and brand identity.
       </>
     ),
   },
