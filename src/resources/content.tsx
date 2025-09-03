@@ -88,7 +88,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://meetings.hubspot.com/ricardo-aya1",
   },
   intro: {
     display: true,
@@ -112,17 +112,17 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Bido",
+        timeframe: "2017 - Present",
+        role: "CEO",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Leading the project to make music legal and easy for businesses, reducing costs
+            for commercial use of music that fits brands.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Creating a catalog under a blanket licensing model, designed to improve the
+            experience in restaurants, hotels, spas, gyms, and shopping centers.
           </>,
         ],
         images: [
@@ -136,17 +136,17 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Catalog",
+        timeframe: "2023 - Present",
+        role: "Author and Composer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Owner of a personal catalog created with the aim of providing musical atmosphere
+            to business that have points of sale..
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            This music catalog includes genres such as Pop, Deep House, Bossa Nova, Jazz,
+            Reggae, Salsa and is not managed by any global Performing Rights Organization.
           </>,
         ],
         images: [],
@@ -157,13 +157,17 @@ const about: About = {
     display: true, // set to false to hide this section
     title: "Studies",
     institutions: [
-      {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+     {
+        name: "Sergio Arboleda University",
+        description: <>Software and web application development.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Politecnico Grancolombiano",
+        description: <>Studied marketing and growth.</>,
+      },
+      {
+        name: "National Copyright Directorate",
+        description: <>Copyright for the music industry.</>,
       },
     ],
   },
