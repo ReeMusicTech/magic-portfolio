@@ -32,9 +32,9 @@ const social: Social = [
     link: "https://www.linkedin.com/in/ricardo-aya-47715520/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "WhatsApp",
+    icon: "WhatsApp",
+    link: "https://goo.su/UddDG22",
   },
   {
     name: "Email",
@@ -47,7 +47,7 @@ const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
+  title: `${person.name} | Music | Marketing | Tech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
   headline: <>Music creator, developer, solopreneur & model car lover.</>,
   featured: {
