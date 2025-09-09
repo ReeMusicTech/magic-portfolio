@@ -67,7 +67,7 @@ const home: Home = {
     <>
       I’m Ricardo, my nickname is Ree. I've been programming music in stores
        for many years, based in México City. I’m the founder and CEO at {"Bido"}
-      , a platform that allows me to sell the music I make. I want to
+      , a platform that allows me to sell the music I make globally. I want to
        empower more people to do the same.
       <br /> 
     </>
