@@ -4,6 +4,7 @@ export {
   social,
   newsletter,
   home,
+  playlist,
   about,
   blog,
   work,

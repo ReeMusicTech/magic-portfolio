@@ -1,5 +1,6 @@
 import { IconName } from "@/resources/icons";
 import { zones } from "tzdata";
+import React from "react";
 
 /**
  * IANA time zone string (e.g., 'Asia/Calcutta', 'Europe/Vienna').

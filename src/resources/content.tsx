@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Gallery, Home, Playlist, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
@@ -244,6 +244,15 @@ const blog: Blog = {
   // All posts will be listed on the /blog route
 };
 
+const playlist: Playlist = {
+  path: "/playlist",
+  label: "Playlist",
+  title: "Music that I have created in order to set the mood for a point of sale.",
+  description: `Read what ${person.name} has been up to recently`,
+  // Create new blog posts by adding a new .mdx file to app/blog/posts
+  // All posts will be listed on the /blog route
+};
+
 const work: Work = {
   path: "/work",
   label: "Work",
@@ -304,4 +313,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, playlist, about, blog, work, gallery };
