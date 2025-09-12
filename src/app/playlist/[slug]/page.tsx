@@ -75,7 +75,7 @@ export default async function Playlist({ params }: { params: Promise<{ slug: str
       <Row fillWidth horizontal="center">
         <Column as="section" maxWidth="m" horizontal="center" gap="l" paddingTop="24">
           <Schema
-            as="playlistPosting"
+            as="blogPosting"
             baseURL={baseURL}
             path={`${playlist.path}/${post.slug}`}
             title={post.metadata.title}
