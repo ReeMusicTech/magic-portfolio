@@ -3,6 +3,7 @@ import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
 
 import classNames from "classnames";
+import Script from "next/script";
 
 import {
   Background,
@@ -45,6 +46,20 @@ export default async function RootLayout({
       )}
     >
       <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EZLYCFSQ2F"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-EZLYCFSQ2F');
+          `}
+        </Script>
+        
         <script
           id="theme-init"
           dangerouslySetInnerHTML={{
