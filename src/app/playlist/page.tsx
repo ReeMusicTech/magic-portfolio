@@ -17,7 +17,7 @@ export default function Playlist() {
   return (
     <Column maxWidth="m" paddingTop="24">
       <Schema
-        as="playlistPosting"
+        as="blogPosting"
         baseURL={baseURL}
         title={playlist.title}
         description={playlist.description}
