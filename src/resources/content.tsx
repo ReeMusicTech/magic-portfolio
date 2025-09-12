@@ -249,8 +249,8 @@ const playlist: Playlist = {
   label: "Playlist",
   title: "Music that I have created in order to set the mood for a point of sale.",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  id: "",
+  name: ""
 };
 
 const work: Work = {

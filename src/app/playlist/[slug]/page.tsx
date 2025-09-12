@@ -48,7 +48,7 @@ export async function generateMetadata({
     description: post.metadata.summary,
     baseURL: baseURL,
     image: post.metadata.image || `/api/og/generate?title=${post.metadata.title}`,
-    path: `${(playlist as any).path}/${post.slug}`,
+    path: `${playlist.path}/${post.slug}`,
   });
 }
 
