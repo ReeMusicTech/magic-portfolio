@@ -163,3 +163,11 @@ export type OnceUIConfig = {
   effects: EffectsConfig;
   dataStyle: DataStyleConfig;
 };
+
+export interface Playlist {
+  // Define las propiedades que necesite tu playlist
+  id: string;
+  name: string;
+  tracks?: string[];
+  // ... otras propiedades que necesites
+}
