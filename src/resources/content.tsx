@@ -66,7 +66,8 @@ const home: Home = {
   subline: (
     <>
       I’m Ricardo, my nickname is Ree. I've been programming music in stores
-       for many years, based in México City. I’m the founder and CEO at {"Bido"}
+      for many years, based in México City. I’m the founder and CEO at  
+      <a href="https://bido.app" target="_blank" rel="noopener noreferrer"> Bido </a>
       , a platform that allows me to sell the music I make globally. I want to
        empower more people to do the same.
       <br /> 
