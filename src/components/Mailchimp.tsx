@@ -186,7 +186,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
                   size="m"
                   style={{ width: "auto", minWidth: "120px" }}
                 >
-                  Subscribe
+                  I want
                 </Button>
               </a>
             </Row>
