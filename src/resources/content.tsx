@@ -14,8 +14,8 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My quarterly newsletter about music in stores.</>,
+  title: <>Donate to {person.firstName}</>,
+  description: <>Support the development of fair and viable music licensing solutions for business.</>,
 };
 
 const social: Social = [

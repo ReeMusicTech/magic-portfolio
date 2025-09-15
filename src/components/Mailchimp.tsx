@@ -130,6 +130,8 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
           s={{ direction: "column" }}
           gap="8"
         >
+          {/* INPUT DE EMAIL ELIMINADO */}
+          {/* 
           <Input
             formNoValidate
             id="mce-EMAIL"
@@ -147,6 +149,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
             onBlur={handleBlur}
             errorMessage={error}
           />
+          */}
           <div style={{ display: "none" }}>
             <input
               type="checkbox"
@@ -170,10 +173,18 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
               value=""
             />
           </div>
-          <div className="clear">
-            <Row height="48" vertical="center">
-              <Button id="mc-embedded-subscribe" value="Subscribe" size="m" fillWidth>
-                Subscribe
+          <div className="clear" style={{ display: "flex", justifyContent: "center" }}>
+            <Row height="48" vertical="center" horizontal="center">
+              <Button 
+                id="mc-embedded-subscribe" 
+                value="Subscribe" 
+                size="m"
+                href="https://www.paypal.com/donate/?business=D9TH8CRYQ52ZL&no_recurring=0&item_name=Thank+you+for+your+donation%2C+this+helps+us+continue+creating+music+for+businesses.&currency_code=USD"
+                as="a"
+                target="_blank"
+                style={{ width: "auto", minWidth: "120px" }}
+              >
+                I want
               </Button>
             </Row>
           </div>
