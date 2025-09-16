@@ -173,24 +173,22 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
               value=""
             />
           </div>
-          <div className="clear" style={{ display: "flex", justifyContent: "center" }}>
-            <Row height="48" vertical="center" horizontal="center">
-              <a 
-                href="https://www.paypal.com/donate/?business=D9TH8CRYQ52ZL&no_recurring=0&item_name=Thank+you+for+your+donation%2C+this+helps+us+continue+creating+music+for+businesses.&currency_code=USD"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none" }}
+          <Column fillWidth horizontal="center" vertical="center">
+            <a 
+              href="https://www.paypal.com/donate/?business=D9TH8CRYQ52ZL&no_recurring=0&item_name=Thank+you+for+your+donation%2C+this+helps+us+continue+creating+music+for+businesses.&currency_code=USD"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Button 
+                id="mc-embedded-subscribe" 
+                size="m"
+                style={{ width: "auto", minWidth: "120px" }}
               >
-                <Button 
-                  id="mc-embedded-subscribe" 
-                  size="m"
-                  style={{ width: "auto", minWidth: "120px" }}
-                >
-                  I want
-                </Button>
-              </a>
-            </Row>
-          </div>
+                I want
+              </Button>
+            </a>
+          </Column>
         </Row>
       </form>
     </Column>
