@@ -33,7 +33,7 @@ const social: Social = [
   },
   {
     name: "WhatsApp",
-    icon: "WhatsApp",
+    icon: "whatsapp",
     link: "https://goo.su/UddDG22",
   },
   {
