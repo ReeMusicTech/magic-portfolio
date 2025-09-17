@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Ricardo",
   lastName: "Aya",
   name: `Ricardo Aya`,
-  role: "Music curator",
+  role: "Music Executive | Entreprenour | Tech Innovator | Rights-Conscious Creator",
   avatar: "/images/avatar.jpg",
   email: "ricardo.aya@bido.app",
   location: "America/Mexico_City", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -49,7 +49,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name} | Music | Marketing | Tech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Music creator, vibecoder, solopreneur & model car lover.</>,
+  headline: <>Music creator | Vibecoder | Solopreneur | Model car enthusiast</>,
   featured: {
     display: true,
     title: (
@@ -65,11 +65,11 @@ const home: Home = {
   },
   subline: (
     <>
-      I’m Ricardo, my nickname is Ree. I've been programming music in stores
-      for many years, based in México City. I’m the founder and CEO at  
+      Hi, I’m Ricardo-most people call me Ree. Based in México City. I've been programming music 
+      for stores for many years, I’m also the founder and CEO of   
       <a href="https://bido.app" target="_blank" rel="noopener noreferrer"> Bido </a>
-      , a platform that allows me to sell the music I make globally. I want to
-       empower more people to do the same.
+      , a platform that lets me share and sell my music worldwide. My mission is to empower
+      more creators to do the same and turn their passion into global opportunities.
       <br /> 
     </>
   ),
@@ -96,14 +96,16 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        He is a forward-thinking executive who seamlessly integrates music, technology,
-        and legal expertise to drive innovation in the commercial audio space. With a
-        strategic focus on AI-generated music, intellectual property efficiency,
-        and brand-aligned soundscapes, he consistently stays ahead of industry trends. 
-        Through Bido, he is building a scalable, rights-conscious music platform tailored
-        for retail, hospitality, and commercial environments. His approach combines
-        business acumen, legal precision, and creative insight — not merely delivering
-        music, but shaping how it enhances customer experience and brand identity.
+        <h3>Professional Summary</h3>
+        Forward-thinking executive who seamlessly integrates music, technology, and legal expertise
+        to drive innovation in the commercial audio space. With a strategic focus on AI-generated
+        music, intellectual property efficiency, and brand-aligned soundscapes, Ricardo
+        consistently stays ahead of industry trends.
+        <br /><br />
+        Through Bido, he is building a scalable, rights-conscious music platform tailored for
+        retail, hospitality, and commercial environments. His approach combines business acumen,
+        legal precision, and creative insight—not merely delivering music, but redefining how it
+        enhances customer experience and brand identity.
       </>
       
     ),
@@ -118,12 +120,16 @@ const about: About = {
         role: "CEO",
         achievements: [
           <>
-            Leading the project to make music legal and easy for businesses, reducing costs
-            for commercial use of music that fits brands.
+            Leading the development of a platform that makes music legal, affordable, and
+            brand-tailored for businesses.
           </>,
           <>
-            Creating a catalog under a blanket licensing model, designed to improve the
-            experience in restaurants, hotels, spas, gyms, and shopping centers.
+            Pioneering a blanket licensing model with a curated catalog designed for restaurants,
+            hotels, spas, gyms, and shopping centers.
+          </>,
+          <>
+            Driving global scalability with a focus on copyright compliance and customer
+            experience.
           </>,
         ],
         images: [
@@ -137,17 +143,19 @@ const about: About = {
         ],
       },
       {
-        company: "Catalog",
+        company: "Personal Music Catalog",
         timeframe: "2023 - Present",
-        role: "Author and Composer",
+        role: "Author & Composer",
         achievements: [
           <>
-            Owner of a personal catalog created with the aim of providing musical atmosphere
-            to business that have points of sale..
+            Building an independent commercial-use catalog created for businesses with physical
+            points of sale.
           </>,
           <>
-            This music catalog includes genres such as Pop, Deep House, Bossa Nova, Jazz,
-            Reggae, Salsa and is not managed by any global Performing Rights Organization.
+            Composing across genres including Pop, Deep House, Bossa Nova, Jazz, Reggae, and Salsa.
+          </>,
+          <>
+            Catalog is rights-cleared and independent of global Performing Rights Organizations (PROs).
           </>,
         ],
         images: [],
@@ -156,19 +164,19 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
      {
         name: "Sergio Arboleda University",
-        description: <>Software and web application development.</>,
+        description: <>Software & Web Application Development.</>,
       },
       {
-        name: "Politecnico Grancolombiano",
-        description: <>Studied marketing and growth.</>,
+        name: "Politécnico Grancolombiano",
+        description: <>Marketing & Growth.</>,
       },
       {
         name: "National Copyright Directorate",
-        description: <>Copyright for the music industry.</>,
+        description: <>Copyright in the Music Industry.</>,
       },
     ],
   },
