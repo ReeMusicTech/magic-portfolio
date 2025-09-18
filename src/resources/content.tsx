@@ -14,8 +14,12 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Donate to {person.firstName}</>,
-  description: <>Support the development of fair and viable music licensing solutions for business.</>,
+  title: <>Support {person.firstName}</>,
+  description: <>Your contribution helps us keep creating music tailored for businesses around the world.
+    Every donation fuels the mission to make music accessible, legal, and brand-focused for restaurants, hotels, cafés, and more.
+    <br /><br />
+    Thank you for your support!
+    </>,
 };
 
 const social: Social = [
