@@ -1,4 +1,4 @@
-import { Column, Meta, Schema } from "@once-ui-system/core";
+import { Meta, Schema } from "@once-ui-system/core";
 import { baseURL, playlist, person } from "@/resources";
 import MusicPlaylists from "@/components/playlist/MusicPlaylists";
 
