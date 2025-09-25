@@ -124,7 +124,7 @@ export default function MusicPlaylists({ showSupport = true }: MusicPlaylistsPro
             <Text variant="heading-strong-l" onBackground="neutral-strong">
               Support Ricardo
             </Text>
-            <Column gap="8" maxWidth="600px" marginX="auto">
+            <Column gap="8" maxWidth={600} marginX="auto">
               <Text variant="body-default-m" onBackground="neutral-weak">
                 Your contribution helps us keep creating music tailored for businesses 
                 around the world. Every donation fuels the mission to make music 
