@@ -1,7 +1,7 @@
 "use client";
 
 import { Column, Grid, Row, Text, Button } from "@once-ui-system/core";
-import MusicCard from "./MusicCard";
+import MusicCard from "./MusicCard"; // Esta importación debe apuntar al archivo correcto
 
 interface PlaylistData {
   title: string;
