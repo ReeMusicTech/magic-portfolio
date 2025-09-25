@@ -52,10 +52,8 @@ export default function MusicCard({ title, description, platform, url, size = "m
   return (
     <Card
       fillWidth
+      key={title}
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      transition="micro-medium"
       border="transparent"
       background="transparent"
       padding="4"
