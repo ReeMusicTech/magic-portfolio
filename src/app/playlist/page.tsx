@@ -16,7 +16,7 @@ export default function Playlist() {
   return (
     <>
       <Schema
-        as="musicPlaylist"
+        as="webPage"
         baseURL={baseURL}
         title={playlist.title}
         description={playlist.description}
