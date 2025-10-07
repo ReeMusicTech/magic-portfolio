@@ -110,6 +110,19 @@ const about: About = {
         retail, hospitality, and commercial environments. His approach combines business acumen,
         legal precision, and creative insight—not merely delivering music, but redefining how it
         enhances customer experience and brand identity.
+        <br /><br />
+        Within the music industry, Ricardo Aya is actively exploring the
+        potential of leveraging API-based communication to bring greater
+        transparency and efficiency to public performance royalties. He
+        envisions developing an application that enables catalog owners to
+        track which music is being played at each commercial establishment
+        in real time. To achieve this, he is working to align a diverse
+        set of stakeholders — including content owners, individual and
+        collective rights managers, major labels, performance rights
+        organizations (PROs), background music service providers, and
+        businesses themselves. The goal is to build a system offering
+        structured insights that could significantly improve the accuracy
+        and fairness of royalty distribution.
       </>
       
     ),
