@@ -38,7 +38,7 @@ const social: Social = [
   {
     name: "WhatsApp",
     icon: "whatsapp",
-    link: "https://goo.su/UddDG22",
+    link: "https://wa.me/573002155611",
   },
   {
     name: "Email",
@@ -96,35 +96,35 @@ const about: About = {
     link: "https://meetings.hubspot.com/ricardo-aya1",
   },
   intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        <h3>Professional Summary</h3>
-        Forward-thinking executive who seamlessly integrates music, technology, and legal expertise
-        to drive innovation in the commercial audio space. With a strategic focus on AI-generated
-        music, intellectual property efficiency, and brand-aligned soundscapes, Ricardo
-        consistently stays ahead of industry trends.
-        <br /><br />
-        Through Bido, he is building a scalable, rights-conscious music platform tailored for
-        retail, hospitality, and commercial environments. His approach combines business acumen,
-        legal precision, and creative insight—not merely delivering music, but redefining how it
-        enhances customer experience and brand identity.
-        <br /><br />
-        Within the music industry, Ricardo Aya is actively exploring the
-        potential of leveraging API-based communication to bring greater
-        transparency and efficiency to public performance royalties. He
-        envisions developing an application that enables catalog owners to
-        track which music is being played at each commercial establishment
-        in real time. To achieve this, he is working to align a diverse
-        set of stakeholders — including content owners, individual and
-        collective rights managers, major labels, performance rights
-        organizations (PROs), background music service providers, and
-        businesses themselves. The goal is to build a system offering
-        structured insights that could significantly improve the accuracy
-        and fairness of royalty distribution.
-      </>
-      
+  display: true,
+  title: "Introduction",
+  description: (
+    <>
+      <h3>Professional Summary</h3>
+      Forward-thinking executive who seamlessly integrates music, technology, and
+      legal expertise to drive innovation in the commercial audio space. With a
+      strategic focus on AI-generated music, intellectual property efficiency, and
+      brand-aligned soundscapes, Ricardo consistently stays ahead of industry trends.
+      <br /><br />
+      Through Bido, he is building a scalable, rights-conscious music platform
+      tailored for retail, hospitality, and commercial environments. His approach
+      combines business acumen, legal precision, and creative insight—not merely
+      delivering music, but redefining how it enhances customer experience and
+      brand identity.
+      <br /><br />
+      Within the music industry, Ricardo is actively exploring the
+      potential of leveraging APIs-based communication to bring greater
+      transparency and efficiency to public performance royalties. He
+      envisions developing an application that enables catalog owners to
+      track which music is being played at each commercial establishment
+      all the time. To achieve this, he is working to align a diverse
+      set of stakeholders — including content owners, individual and
+      collective rights managers, major labels, performance rights
+      organizations (PROs), background music service providers, and
+      businesses themselves. The goal is to build a system offering
+      structured insights that could significantly improve the accuracy
+      and fairness of royalty distribution.
+    </>
     ),
   },
   work: {
