@@ -143,15 +143,7 @@ export default function MusicPlaylists({ showSupport = true }: MusicPlaylistsPro
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Donate via PayPal
-                </Button>
-                <Button
-                  variant="secondary"
-                  href="https://ko-fi.com/ricardoaya"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Support on Ko-fi
+                  Donate Now
                 </Button>
               </Row>
             </Column>
