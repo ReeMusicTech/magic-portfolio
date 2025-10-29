@@ -72,7 +72,7 @@ const home: Home = {
       Hi, I’m Ricardo-most people call me Ree. Based in México City. I've been programming music 
       for stores for many years, I’m also the founder and CEO of   
       <a href="https://bido.app" target="_blank" rel="noopener noreferrer"> Bido </a>
-      , a platform that lets me share and sell my music worldwide. My mission is to empower
+      , a platform that lets me share and sell my music worldwide. No Performing Rights Organization can claim royalties. My mission is to empower
       more creators to do the same and turn their passion into global opportunities.
       <br /> 
     </>
