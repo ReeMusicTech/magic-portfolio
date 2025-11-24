@@ -53,7 +53,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name} | Music | Marketing | Tech`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Music creator, vibecoder, solopreneur, model car enthusiast</>,
+  headline: <>I create music that helps businesses sound unique, model car enthusiast</>,
   featured: {
     display: true,
     title: (
