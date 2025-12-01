@@ -45,6 +45,12 @@ const playlists: PlaylistData[] = [
     platform: "spotify",
     url: "https://open.spotify.com/playlist/5wPaFaBKUL0rjEUa52Ybfj",
   },
+  {
+    title: "The best new Christmas music",
+    description: "Celebrate the season with a fresh holiday soundtrack—new, original Christmas music crafted to bring warmth, joy, and a modern festive vibe to your space.",
+    platform: "spotify",
+    url: "https://open.spotify.com/playlist/4SR4w3Z8ElUk1Tt5EIVB7v",
+  },
 ];
 
 interface MusicPlaylistsProps {
