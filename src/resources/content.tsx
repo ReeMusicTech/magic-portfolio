@@ -103,7 +103,7 @@ const about: About = {
       <h3>Professional Summary</h3>
       Forward-thinking executive who seamlessly integrates music, technology, and
       legal expertise to drive innovation in the commercial audio space. With a
-      strategic focus on AI-generated music, intellectual property efficiency, and
+      strategic focus on AI-supported music, intellectual property efficiency, and
       brand-aligned soundscapes, Ricardo consistently stays ahead of industry trends.
       <br /><br />
       Through Bido, he is building a scalable, rights-conscious music platform
