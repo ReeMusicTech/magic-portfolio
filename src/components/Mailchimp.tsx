@@ -175,7 +175,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
           </div>
           <Column fillWidth horizontal="center" vertical="center">
             <a 
-              href="https://www.paypal.com/donate/?business=D9TH8CRYQ52ZL&no_recurring=0&item_name=Thank+you+for+your+donation%2C+this+helps+us+continue+creating+music+for+businesses.&currency_code=USD"
+              href="https://paypal.me/reemusictech?locale.x=es_XC&country.x=MX"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
