@@ -11,12 +11,14 @@ import {
   Meta,
   Line,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL, routes } from "@/resources";
+import { baseURL, routes } from "@/resources";
+import { getI18n } from "@/i18n/server";
 import { Mailchimp } from "@/components";
 import { Projects } from "@/components/work/Projects";
 import { Posts } from "@/components/blog/Posts";
 
 export async function generateMetadata() {
+  const { home } = (await getI18n()).content;
   return Meta.generate({
     title: home.title,
     description: home.description,
@@ -26,7 +28,10 @@ export async function generateMetadata() {
   });
 }
 
-export default function Home() {
+export default async function Home() {
+  const { t, content } = await getI18n();
+  const { home, about, person } = content;
+
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
       <Schema
@@ -111,7 +116,7 @@ export default function Home() {
           <Row fillWidth gap="24" marginTop="40" s={{ direction: "column" }}>
             <Row flex={1} paddingLeft="l" paddingTop="24">
               <Heading as="h2" variant="display-strong-xs" wrap="balance">
-                Latest from the blog
+                {t.home.latestFromBlog}
               </Heading>
             </Row>
             <Row flex={3} paddingX="20">

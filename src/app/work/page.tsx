@@ -1,8 +1,10 @@
 import { Column, Heading, Meta, Schema } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { baseURL } from "@/resources";
+import { getI18n } from "@/i18n/server";
 import { Projects } from "@/components/work/Projects";
 
 export async function generateMetadata() {
+  const { work } = (await getI18n()).content;
   return Meta.generate({
     title: work.title,
     description: work.description,
@@ -12,7 +14,10 @@ export async function generateMetadata() {
   });
 }
 
-export default function Work() {
+export default async function Work() {
+  const { content } = await getI18n();
+  const { about, person, work } = content;
+
   return (
     <Column maxWidth="m" paddingTop="24">
       <Schema

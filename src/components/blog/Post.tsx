@@ -2,7 +2,7 @@
 
 import { Card, Column, Media, Row, Avatar, Text } from "@once-ui-system/core";
 import { formatDate } from "@/utils/formatDate";
-import { person } from "@/resources";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 interface PostProps {
   post: any;
@@ -11,6 +11,8 @@ interface PostProps {
 }
 
 export default function Post({ post, thumbnail, direction }: PostProps) {
+  const { locale, t, content } = useLocale();
+  const { person } = content;
   return (
     <Card
       fillWidth
@@ -33,7 +35,7 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
           cursor="interactive"
           radius="l"
           src={post.metadata.image}
-          alt={"Thumbnail of " + post.metadata.title}
+          alt={`${t.blog.thumbnailOf} ${post.metadata.title}`}
           aspectRatio="16 / 9"
         />
       )}
@@ -45,7 +47,7 @@ export default function Post({ post, thumbnail, direction }: PostProps) {
               <Text variant="label-default-s">{person.name}</Text>
             </Row>
             <Text variant="body-default-xs" onBackground="neutral-weak">
-              {formatDate(post.metadata.publishedAt, false)}
+              {formatDate(post.metadata.publishedAt, false, locale)}
             </Text>
           </Row>
           <Text variant="heading-strong-l" wrap="balance">

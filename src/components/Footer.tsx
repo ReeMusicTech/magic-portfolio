@@ -1,9 +1,13 @@
+"use client";
+
 import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
-import { person, social } from "@/resources";
+import { useLocale } from "@/i18n/LocaleProvider";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t, content } = useLocale();
+  const { person, social } = content;
 
   return (
     <Row as="footer" fillWidth padding="8" horizontal="center" s={{ direction: "column" }}>
@@ -26,7 +30,7 @@ export const Footer = () => {
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI unless you have a Pro license. */}
-            / Play the music with{" "}
+            / {t.footer.playWith}{" "}
             <SmartLink href="https://bido.app">Bido</SmartLink>
           </Text>
         </Text>

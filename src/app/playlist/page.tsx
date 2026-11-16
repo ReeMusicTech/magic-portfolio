@@ -1,8 +1,10 @@
 import { Meta, Schema } from "@once-ui-system/core";
-import { baseURL, playlist, person } from "@/resources";
+import { baseURL } from "@/resources";
+import { getI18n } from "@/i18n/server";
 import MusicPlaylists from "@/components/playlist/MusicPlaylists";
 
 export async function generateMetadata() {
+  const { playlist } = (await getI18n()).content;
   return Meta.generate({
     title: playlist.title,
     description: playlist.description,
@@ -12,7 +14,9 @@ export async function generateMetadata() {
   });
 }
 
-export default function Playlist() {
+export default async function Playlist() {
+  const { playlist, person } = (await getI18n()).content;
+
   return (
     <>
       <Schema

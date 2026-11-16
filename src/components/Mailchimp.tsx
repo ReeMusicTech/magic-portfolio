@@ -1,6 +1,7 @@
 "use client";
 
-import { mailchimp, newsletter } from "@/resources";
+import { mailchimp } from "@/resources";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { Button, Heading, Input, Text, Background, Column, Row } from "@once-ui-system/core";
 import { opacity, SpacingToken } from "@once-ui-system/core";
 import { useState } from "react";
@@ -14,6 +15,8 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T
 }
 
 export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...flex }) => {
+  const { t, content } = useLocale();
+  const { newsletter } = content;
   const [email, setEmail] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [touched, setTouched] = useState<boolean>(false);
@@ -32,7 +35,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
     setEmail(value);
 
     if (!validateEmail(value)) {
-      setError("Please enter a valid email address.");
+      setError(t.newsletter.invalidEmail);
     } else {
       setError("");
     }
@@ -43,7 +46,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
   const handleBlur = () => {
     setTouched(true);
     if (!validateEmail(email)) {
-      setError("Please enter a valid email address.");
+      setError(t.newsletter.invalidEmail);
     }
   };
 
@@ -185,7 +188,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
                 size="m"
                 style={{ width: "auto", minWidth: "120px" }}
               >
-                Donate Now 
+                {t.newsletter.donateNow}
               </Button>
             </a>
           </Column>

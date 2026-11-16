@@ -21,7 +21,7 @@ const routes: RoutesConfig = {
   "/playlist": true,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/gallery": false, // replaced in the header by the language (i18n) switcher
 };
 
 const display: DisplayConfig = {

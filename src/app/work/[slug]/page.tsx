@@ -15,18 +15,12 @@ import {
   Avatar,
   Line,
 } from "@once-ui-system/core";
-import { baseURL, about, person, work } from "@/resources";
+import { baseURL } from "@/resources";
+import { getI18n } from "@/i18n/server";
 import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
-
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "work", "projects"]);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
 
 export async function generateMetadata({
   params,
@@ -38,7 +32,9 @@ export async function generateMetadata({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  const posts = getPosts(["src", "app", "work", "projects"]);
+  const { locale, content } = await getI18n();
+  const work = content.work;
+  const posts = getPosts(["src", "app", "work", "projects"], locale);
   let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
@@ -62,7 +58,9 @@ export default async function Project({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  let post = getPosts(["src", "app", "work", "projects"]).find((post) => post.slug === slugPath);
+  const { locale, t, content } = await getI18n();
+  const { about, person, work } = content;
+  let post = getPosts(["src", "app", "work", "projects"], locale).find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
@@ -94,10 +92,10 @@ export default async function Project({
       />
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
+          <Text variant="label-strong-m">{t.work.projects}</Text>
         </SmartLink>
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
-          {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
+          {post.metadata.publishedAt && formatDate(post.metadata.publishedAt, false, locale)}
         </Text>
         <Heading variant="display-strong-m">{post.metadata.title}</Heading>
       </Column>
@@ -127,7 +125,7 @@ export default async function Project({
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
+          {t.work.relatedProjects}
         </Heading>
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>

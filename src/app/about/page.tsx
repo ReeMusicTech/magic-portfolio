@@ -12,12 +12,14 @@ import {
   Schema,
   Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
+import { baseURL } from "@/resources";
+import { getI18n } from "@/i18n/server";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
+  const { about } = (await getI18n()).content;
   return Meta.generate({
     title: about.title,
     description: about.description,
@@ -27,7 +29,9 @@ export async function generateMetadata() {
   });
 }
 
-export default function About() {
+export default async function About() {
+  const { t, content } = await getI18n();
+  const { about, person, social } = content;
   const structure = [
     {
       title: about.intro.title,
@@ -129,7 +133,7 @@ export default function About() {
                 }}
               >
                 <Icon paddingLeft="12" name="calendar" onBackground="brand-weak" />
-                <Row paddingX="8">Schedule a call</Row>
+                <Row paddingX="8">{t.about.scheduleCall}</Row>
                 <IconButton
                   href={about.calendar.link}
                   data-border="rounded"

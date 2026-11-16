@@ -4,6 +4,7 @@ import React, { JSX } from "react";
 import { Heading, Flex, IconButton, useToast } from "@once-ui-system/core";
 
 import styles from "@/components/HeadingLink.module.scss";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 interface HeadingLinkProps {
   id: string;
@@ -14,6 +15,7 @@ interface HeadingLinkProps {
 
 export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, style }) => {
   const { addToast } = useToast();
+  const { t } = useLocale();
 
   const copyURL = (id: string): void => {
     const url = `${window.location.origin}${window.location.pathname}#${id}`;
@@ -21,13 +23,13 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
       () => {
         addToast({
           variant: "success",
-          message: "Link copied to clipboard.",
+          message: t.headingLink.copied,
         });
       },
       () => {
         addToast({
           variant: "danger",
-          message: "Failed to copy link.",
+          message: t.headingLink.failed,
         });
       },
     );
@@ -61,7 +63,7 @@ export const HeadingLink: React.FC<HeadingLinkProps> = ({ id, level, children, s
         size="s"
         icon="openLink"
         variant="ghost"
-        tooltip="Copy"
+        tooltip={t.headingLink.copy}
         tooltipPosition="right"
       />
     </Flex>

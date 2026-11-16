@@ -1,6 +1,7 @@
 import { getPosts } from "@/utils/utils";
 import { Grid } from "@once-ui-system/core";
 import Post from "./Post";
+import { getLocale } from "@/i18n/server";
 
 interface PostsProps {
   range?: [number] | [number, number];
@@ -10,14 +11,15 @@ interface PostsProps {
   exclude?: string[];
 }
 
-export function Posts({
+export async function Posts({
   range,
   columns = "1",
   thumbnail = false,
   exclude = [],
   direction,
 }: PostsProps) {
-  let allBlogs = getPosts(["src", "app", "playlist", "posts"]);
+  const locale = await getLocale();
+  let allBlogs = getPosts(["src", "app", "playlist", "posts"], locale);
 
   // Exclude by slug (exact match)
   if (exclude.length) {

@@ -45,6 +45,7 @@ const es: Dictionary = {
     incorrect: "Contraseña incorrecta",
   },
   headingLink: {
+    copy: "Copiar",
     copied: "Enlace copiado al portapapeles.",
     failed: "No se pudo copiar el enlace.",
   },

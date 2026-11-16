@@ -52,10 +52,17 @@ function readMDXFile(filePath: string) {
   return { metadata, content };
 }
 
-function getMDXData(dir: string) {
+/**
+ * Reads every .mdx file in `dir`. When a locale is given, a translated file at
+ * `dir/<locale>/<slug>.mdx` replaces the default one (same slug, so URLs are shared
+ * across languages). Files without a translation fall back to the default version.
+ */
+function getMDXData(dir: string, locale?: string) {
   const mdxFiles = getMDXFiles(dir);
   return mdxFiles.map((file) => {
-    const { metadata, content } = readMDXFile(path.join(dir, file));
+    const translated = locale ? path.join(dir, locale, file) : null;
+    const filePath = translated && fs.existsSync(translated) ? translated : path.join(dir, file);
+    const { metadata, content } = readMDXFile(filePath);
     const slug = path.basename(file, path.extname(file));
 
     return {
@@ -66,7 +73,7 @@ function getMDXData(dir: string) {
   });
 }
 
-export function getPosts(customPath = ["", "", "", ""]) {
+export function getPosts(customPath = ["", "", "", ""], locale?: string) {
   const postsDir = path.join(process.cwd(), ...customPath);
-  return getMDXData(postsDir);
+  return getMDXData(postsDir, locale);
 }

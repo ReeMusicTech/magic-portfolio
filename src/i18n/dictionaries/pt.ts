@@ -45,6 +45,7 @@ const pt: Dictionary = {
     incorrect: "Senha incorreta",
   },
   headingLink: {
+    copy: "Copiar",
     copied: "Link copiado para a área de transferência.",
     failed: "Não foi possível copiar o link.",
   },

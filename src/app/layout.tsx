@@ -15,9 +15,14 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle } from "@/resources";
+import { LocaleProvider } from "@/i18n/LocaleProvider";
+import { localeTags } from "@/i18n/config";
+import { getI18n } from "@/i18n/server";
 
 export async function generateMetadata() {
+  const { content } = await getI18n();
+  const { home } = content;
   return Meta.generate({
     title: home.title,
     description: home.description,
@@ -32,11 +37,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { locale } = await getI18n();
+
   return (
     <Flex
       suppressHydrationWarning
       as="html"
-      lang="en"
+      lang={localeTags[locale]}
       fillWidth
       className={classNames(
         fonts.heading.variable,
@@ -119,6 +126,7 @@ export default async function RootLayout({
         />
       </head>
       <Providers>
+        <LocaleProvider locale={locale}>
         <Column
           as="body"
           background="page"
@@ -179,6 +187,7 @@ export default async function RootLayout({
           </Flex>
           <Footer />
         </Column>
+        </LocaleProvider>
       </Providers>
     </Flex>
   );

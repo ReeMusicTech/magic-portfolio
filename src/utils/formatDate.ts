@@ -1,4 +1,7 @@
-export function formatDate(date: string, includeRelative = false) {
+import { defaultLocale, getDictionary, localeTags, type Locale } from "@/i18n";
+
+export function formatDate(date: string, includeRelative = false, locale: Locale = defaultLocale) {
+  const t = getDictionary(locale).date;
   const currentDate = new Date();
 
   if (!date.includes("T")) {
@@ -13,16 +16,16 @@ export function formatDate(date: string, includeRelative = false) {
   let formattedDate = "";
 
   if (yearsAgo > 0) {
-    formattedDate = `${yearsAgo}y ago`;
+    formattedDate = t.yearsAgo(yearsAgo);
   } else if (monthsAgo > 0) {
-    formattedDate = `${monthsAgo}mo ago`;
+    formattedDate = t.monthsAgo(monthsAgo);
   } else if (daysAgo > 0) {
-    formattedDate = `${daysAgo}d ago`;
+    formattedDate = t.daysAgo(daysAgo);
   } else {
-    formattedDate = "Today";
+    formattedDate = t.today;
   }
 
-  const fullDate = targetDate.toLocaleString("en-us", {
+  const fullDate = targetDate.toLocaleString(localeTags[locale], {
     month: "long",
     day: "numeric",
     year: "numeric",

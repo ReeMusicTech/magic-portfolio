@@ -5,8 +5,11 @@ import { useEffect, useState } from "react";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
-import { routes, display, person, about, playlist, blog, work, gallery } from "@/resources";
+import { routes, display } from "@/resources";
+import { localeTags } from "@/i18n/config";
+import { useLocale } from "@/i18n/LocaleProvider";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
@@ -44,6 +47,8 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const { locale, content } = useLocale();
+  const { person, about, playlist, blog, work } = content;
 
   return (
     <>
@@ -87,7 +92,12 @@ export const Header = () => {
           >
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton
+                  prefixIcon="home"
+                  href="/"
+                  selected={pathname === "/"}
+                  aria-label={content.home.label}
+                />
               )}
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
               {routes["/about"] && (
@@ -166,25 +176,8 @@ export const Header = () => {
                   </Row>
                 </>
               )}
-              {routes["/gallery"] && (
-                <>
-                  <Row s={{ hide: true }}>
-                    <ToggleButton
-                      prefixIcon="gallery"
-                      href="/gallery"
-                      label={gallery.label}
-                      selected={pathname.startsWith("/gallery")}
-                    />
-                  </Row>
-                  <Row hide s={{ hide: false }}>
-                    <ToggleButton
-                      prefixIcon="gallery"
-                      href="/gallery"
-                      selected={pathname.startsWith("/gallery")}
-                    />
-                  </Row>
-                </>
-              )}
+              <Line background="neutral-alpha-medium" vert maxHeight="24" />
+              <LanguageSwitcher />
               {display.themeSwitcher && (
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
@@ -203,7 +196,7 @@ export const Header = () => {
             gap="20"
           >
             <Flex s={{ hide: true }}>
-              {display.time && <TimeDisplay timeZone={person.location} />}
+              {display.time && <TimeDisplay timeZone={person.location} locale={localeTags[locale]} />}
             </Flex>
           </Flex>
         </Flex>

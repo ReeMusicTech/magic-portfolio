@@ -43,6 +43,7 @@ const en = {
     incorrect: "Incorrect password",
   },
   headingLink: {
+    copy: "Copy",
     copied: "Link copied to clipboard.",
     failed: "Failed to copy link.",
   },

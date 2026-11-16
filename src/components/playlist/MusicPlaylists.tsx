@@ -1,63 +1,17 @@
 "use client";
 
 import { Column, Grid, Row, Text, Button } from "@once-ui-system/core";
-import MusicCard from "./MusicCard"; // Esta importación debe apuntar al archivo correcto
-
-interface PlaylistData {
-  title: string;
-  description: string;
-  platform: "spotify" | "youtube" | "apple";
-  url: string;
-  featured?: boolean;
-}
-
-// Datos de ejemplo - puedes mover esto a un archivo de configuración
-const playlists: PlaylistData[] = [
-  {
-    title: "Music to lobby hotel",
-    description: "Set the perfect tone for your hotel lobby — click to explore a curated soundtrack designed to welcome, relax, and impress.",
-    platform: "spotify",
-    url: "https://open.spotify.com/playlist/1eCz0Dd3pNvFVBlgpHx8Zm",
-    featured: true,
-  },
-  {
-    title: "Afternoon at the restaurant",
-    description: "Play the perfect afternoon vibe — a warm, peaceful soundtrack designed to elevate your restaurant's midday experience.",
-    platform: "youtube",
-    url: "https://music.youtube.com/playlist?list=PL9oikhlzCWtmiN7kmdVxusq_EHAcz1Ot2",
-    featured: true,
-  },
-  {
-    title: "A little bit of Jazz",
-    description: "Brew the perfect mood — click to enjoy smooth jazz curated for coffee and conversation.",
-    platform: "apple",
-    url: "https://music.apple.com/mx/album/data-driven-dreams-vol-2/1822592670",
-  },
-  {
-    title: "Catalog",
-    description: "Discover my full catalog of royalty-free music — crafted to set the perfect atmosphere for any business.",
-    platform: "youtube",
-    url: "https://music.youtube.com/browse/MPADUCujl0XxYFeJo6xqaGBe5Zdw",
-  },
-  {
-    title: "The best music for a fashion store",
-    description: "Click to set the trend — the ultimate music playlist tailored for fashion-forward retail spaces.",
-    platform: "spotify",
-    url: "https://open.spotify.com/playlist/5wPaFaBKUL0rjEUa52Ybfj",
-  },
-  {
-    title: "The best new Christmas music",
-    description: "Celebrate the season with a fresh holiday soundtrack—new, original Christmas music crafted to bring warmth, joy, and a modern festive vibe to your space.",
-    platform: "spotify",
-    url: "https://open.spotify.com/playlist/4SR4w3Z8ElUk1Tt5EIVB7v",
-  },
-];
+import MusicCard from "./MusicCard";
+import { useLocale } from "@/i18n/LocaleProvider";
 
 interface MusicPlaylistsProps {
   showSupport?: boolean;
 }
 
 export default function MusicPlaylists({ showSupport = true }: MusicPlaylistsProps) {
+  const { t, content } = useLocale();
+  const { playlist, playlistPage } = content;
+  const playlists = playlistPage.items;
   const featuredPlaylists = playlists.filter(playlist => playlist.featured);
   const regularPlaylists = playlists.filter(playlist => !playlist.featured);
 
@@ -66,12 +20,10 @@ export default function MusicPlaylists({ showSupport = true }: MusicPlaylistsPro
       {/* Header */}
       <Column gap="16" marginBottom="l" marginLeft="24">
         <Text variant="heading-strong-xl" onBackground="neutral-strong">
-          Music that I have created in order to set the mood for a point of sale.
+          {playlist.title}
         </Text>
         <Text variant="body-default-m" onBackground="neutral-weak">
-          Each playlist is carefully crafted to enhance the customer experience in commercial environments. 
-          All tracks are original and 100% royalty-free, ensuring smooth and legal use across your point of sale. 
-          Explore the different moods and styles available on your favorite platform.
+          {playlistPage.intro}
         </Text>
       </Column>
 
@@ -128,16 +80,14 @@ export default function MusicPlaylists({ showSupport = true }: MusicPlaylistsPro
             }}
           >
             <Text variant="heading-strong-l" onBackground="neutral-strong">
-              Support Ricardo
+              {playlistPage.supportTitle}
             </Text>
             <Column gap="8" style={{ maxWidth: "600px", margin: "0 auto" }}>
               <Text variant="body-default-m" onBackground="neutral-weak">
-                Your contribution helps us keep creating music tailored for businesses 
-                around the world. Every donation fuels the mission to make music 
-                accessible, legal, and brand-focused for restaurants, hotels, cafés, and more.
+                {playlistPage.supportDescription}
               </Text>
               <Text variant="body-default-s" onBackground="neutral-weak">
-                Thank you for your support!
+                {playlistPage.supportThanks}
               </Text>
             </Column>
             
@@ -149,7 +99,7 @@ export default function MusicPlaylists({ showSupport = true }: MusicPlaylistsPro
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Donate Now
+                  {t.newsletter.donateNow}
                 </Button>
               </Row>
             </Column>

@@ -14,19 +14,13 @@ import {
   Media,
   Line,
 } from "@once-ui-system/core";
-import { baseURL, about, person, playlist } from "@/resources";
+import { baseURL } from "@/resources";
+import { getI18n } from "@/i18n/server";
 import { formatDate } from "@/utils/formatDate";
 import { getPosts } from "@/utils/utils";
 import { Metadata } from "next";
 import React from "react";
 import { Posts } from "@/components/playlist/Posts";
-
-export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const posts = getPosts(["src", "app", "playlist", "posts"]);
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
 
 export async function generateMetadata({
   params,
@@ -38,7 +32,9 @@ export async function generateMetadata({
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  const posts = getPosts(["src", "app", "playlist", "posts"]);
+  const { locale, content } = await getI18n();
+  const playlist = content.playlist;
+  const posts = getPosts(["src", "app", "playlist", "posts"], locale);
   let post = posts.find((post) => post.slug === slugPath);
 
   if (!post) return {};
@@ -58,7 +54,9 @@ export default async function Playlist({ params }: { params: Promise<{ slug: str
     ? routeParams.slug.join("/")
     : routeParams.slug || "";
 
-  let post = getPosts(["src", "app", "playlist", "posts"]).find((post) => post.slug === slugPath);
+  const { locale, t, content } = await getI18n();
+  const { about, person, playlist } = content;
+  let post = getPosts(["src", "app", "playlist", "posts"], locale).find((post) => post.slug === slugPath);
 
   if (!post) {
     notFound();
@@ -94,10 +92,10 @@ export default async function Playlist({ params }: { params: Promise<{ slug: str
           />
           <Column maxWidth="s" gap="16" horizontal="center" align="center">
             <SmartLink href="/playlist">
-              <Text variant="label-strong-m">Playlist</Text>
+              <Text variant="label-strong-m">{playlist.label}</Text>
             </SmartLink>
             <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
-              {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
+              {post.metadata.publishedAt && formatDate(post.metadata.publishedAt, false, locale)}
             </Text>
             <Heading variant="display-strong-m">{post.metadata.title}</Heading>
           </Column>
@@ -128,7 +126,7 @@ export default async function Playlist({ params }: { params: Promise<{ slug: str
           <Column fillWidth gap="40" horizontal="center" marginTop="40">
             <Line maxWidth="40" />
             <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-              Recent Playlist
+              {t.playlist.recentPlaylists}
             </Heading>
             <Posts exclude={[post.slug]} range={[1, 2]} columns="2" thumbnail direction="column" />
           </Column>
@@ -152,7 +150,7 @@ export default async function Playlist({ params }: { params: Promise<{ slug: str
           textVariant="label-default-s"
         >
           <Icon name="document" size="xs" />
-          On this page
+          {t.blog.onThisPage}
         </Row>
         <HeadingNav fitHeight />
       </Column>
