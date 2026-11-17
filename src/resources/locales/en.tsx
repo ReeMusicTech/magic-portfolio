@@ -69,8 +69,13 @@ const en: SiteContent = {
           Bido{" "}
         </a>
         , a platform that lets me share and sell my music worldwide. No Performing Rights
-        Organization can claim royalties. My mission is to empower more creators to do the same and
-        turn their passion into global opportunities.
+        Organization can claim royalties. On the flip side, I'm deep into the diecast scene. I
+        shipped{" "}
+        <a href="https://troly.club" target="_blank" rel="noopener noreferrer">
+          Troly
+        </a>{" "}
+        to help collectors track their stash and trade 1:64 scale cars. My mission is to empower
+        more creators to do the same and turn their passion into global opportunities.
         <br />
       </>
     ),

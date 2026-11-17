@@ -71,7 +71,12 @@ const pt: SiteContent = {
           Bido{" "}
         </a>
         , uma plataforma que me permite compartilhar e vender minha música no mundo todo. Nenhuma
-        sociedade de gestão coletiva pode reivindicar royalties. Minha missão é ajudar mais
+        sociedade de gestão coletiva pode reivindicar royalties. Além disso, impulsiono a cena do
+        colecionismo diecast desenvolvendo a{" "}
+        <a href="https://troly.club" target="_blank" rel="noopener noreferrer">
+          Troly
+        </a>
+        , um marketplace para gerenciar e negociar carros em miniatura. Minha missão é ajudar mais
         criadores a fazer o mesmo e transformar sua paixão em oportunidades globais.
         <br />
       </>

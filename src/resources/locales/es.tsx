@@ -71,8 +71,13 @@ const es: SiteContent = {
           Bido{" "}
         </a>
         , una plataforma que me permite compartir y vender mi música en todo el mundo. Ninguna
-        sociedad de gestión colectiva puede reclamar regalías. Mi misión es ayudar a más creadores a
-        hacer lo mismo y convertir su pasión en oportunidades globales.
+        sociedad de gestión colectiva puede cobrar mis regalías. Además, impulso la escena del
+        coleccionismo diecast desarrollando{" "}
+        <a href="https://troly.club" target="_blank" rel="noopener noreferrer">
+          Troly
+        </a>
+        , un marketplace para gestionar y negociar autos a escala. Mi misión es ayudar a más
+        creadores a hacer lo mismo y convertir su pasión en oportunidades globales.
         <br />
       </>
     ),
