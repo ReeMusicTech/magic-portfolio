@@ -144,6 +144,27 @@ const en: SiteContent = {
           images: [{ src: projectImages.bido, alt: "Bido project", width: 16, height: 9 }],
         },
         {
+          company: "Troly",
+          timeframe: "2026 - Present",
+          role: "Founder & Full-Stack Developer",
+          achievements: [
+            <>
+              Built a marketplace and club where diecast collectors catalog their 1:64 scale cars,
+              see what their collection is worth in their own currency, and list pieces for sale or
+              trade.
+            </>,
+            <>
+              Grew the community through an invite-only model with waitlist, referral campaigns, and
+              automated email journeys.
+            </>,
+            <>
+              Shipped the full stack: React PWA, Node.js + MongoDB backend, Stripe memberships and
+              seller payouts, in Spanish, English, and Portuguese.
+            </>,
+          ],
+          images: [{ src: projectImages.troly, alt: "Troly home", width: 16, height: 9 }],
+        },
+        {
           company: "Personal Music Catalog",
           timeframe: "2023 - Present",
           role: "Author & Composer",

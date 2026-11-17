@@ -63,4 +63,5 @@ export const projectImages = {
   figma1: "/images/projects/project-01/cover-02.jpg",
   figma2: "/images/projects/project-01/cover-03.jpg",
   next: "/images/projects/project-01/cover-04.jpg",
+  troly: "/images/projects/project-02/troly-home.webp",
 };

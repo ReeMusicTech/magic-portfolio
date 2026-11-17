@@ -2,6 +2,7 @@ import { getPosts } from "@/utils/utils";
 import { Column } from "@once-ui-system/core";
 import { ProjectCard } from "@/components";
 import { getLocale } from "@/i18n/server";
+import { featuredHref } from "@/resources/locales/shared";
 
 interface ProjectsProps {
   range?: [number, number?];
@@ -17,7 +18,11 @@ export async function Projects({ range, exclude }: ProjectsProps) {
     allProjects = allProjects.filter((post) => !exclude.includes(post.slug));
   }
 
+  // The featured project (the one the Home badge links to) always goes first; the rest by date
+  const featuredSlug = featuredHref.split("/").pop();
   const sortedProjects = allProjects.sort((a, b) => {
+    if (a.slug === featuredSlug) return -1;
+    if (b.slug === featuredSlug) return 1;
     return new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime();
   });
 

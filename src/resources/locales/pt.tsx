@@ -97,10 +97,10 @@ const pt: SiteContent = {
       description: (
         <>
           <h3>Resumo profissional</h3>
-          Executivo visionário que integra música, tecnologia e conhecimento jurídico para impulsionar
-          a inovação no áudio comercial. Com foco estratégico em música apoiada por IA, eficiência em
-          propriedade intelectual e paisagens sonoras alinhadas à marca, Ricardo está sempre à frente
-          das tendências do setor.
+          Executivo visionário que integra música, tecnologia e conhecimento jurídico para
+          impulsionar a inovação no áudio comercial. Com foco estratégico em música apoiada por IA,
+          eficiência em propriedade intelectual e paisagens sonoras alinhadas à marca, Ricardo está
+          sempre à frente das tendências do setor.
           <br />
           <br />
           Por meio da Bido, ele está construindo uma plataforma musical escalável e respeitosa dos
@@ -110,11 +110,11 @@ const pt: SiteContent = {
           identidade da marca.
           <br />
           <br />
-          Na indústria musical, Ricardo explora ativamente o potencial da comunicação baseada em APIs
-          para trazer mais transparência e eficiência aos royalties de execução pública. Sua visão é
-          desenvolver um aplicativo que permita aos titulares de catálogos saber, a todo momento,
-          qual música está tocando em cada estabelecimento comercial. Para isso, trabalha para
-          alinhar um grupo diverso de atores — titulares de conteúdo, gestores de direitos
+          Na indústria musical, Ricardo explora ativamente o potencial da comunicação baseada em
+          APIs para trazer mais transparência e eficiência aos royalties de execução pública. Sua
+          visão é desenvolver um aplicativo que permita aos titulares de catálogos saber, a todo
+          momento, qual música está tocando em cada estabelecimento comercial. Para isso, trabalha
+          para alinhar um grupo diverso de atores — titulares de conteúdo, gestores de direitos
           individuais e coletivos, grandes gravadoras, sociedades de gestão coletiva, provedores de
           música ambiente e os próprios negócios. O objetivo é construir um sistema com informações
           estruturadas que melhore de forma significativa a precisão e a justiça na distribuição de
@@ -145,6 +145,27 @@ const pt: SiteContent = {
             </>,
           ],
           images: [{ src: projectImages.bido, alt: "Projeto Bido", width: 16, height: 9 }],
+        },
+        {
+          company: "Troly",
+          timeframe: "2026 - Atual",
+          role: "Fundador e desenvolvedor full-stack",
+          achievements: [
+            <>
+              Criei um marketplace e clube onde colecionadores de diecast catalogam seus carros em
+              escala 1:64, descobrem quanto vale sua coleção na própria moeda e anunciam peças para
+              venda ou troca.
+            </>,
+            <>
+              Faço a comunidade crescer com um modelo por convite, com lista de espera, campanhas de
+              indicação e sequências de e-mail automatizadas.
+            </>,
+            <>
+              Desenvolvi toda a stack: PWA em React, backend em Node.js + MongoDB, assinaturas e
+              pagamentos a vendedores com Stripe, em espanhol, inglês e português.
+            </>,
+          ],
+          images: [{ src: projectImages.troly, alt: "Início da Troly", width: 16, height: 9 }],
         },
         {
           company: "Catálogo musical próprio",

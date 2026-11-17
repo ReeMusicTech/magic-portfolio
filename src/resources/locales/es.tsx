@@ -102,9 +102,8 @@ const es: SiteContent = {
           IA, la eficiencia en propiedad intelectual y los paisajes sonoros alineados con la marca,
           Ricardo se mantiene siempre un paso adelante de las tendencias de la industria.
           <br />
-          <br />
-          A través de Bido, está construyendo una plataforma musical escalable y respetuosa de los
-          derechos, pensada para el retail, la hotelería y los espacios comerciales. Su enfoque
+          <br />A través de Bido, está construyendo una plataforma musical escalable y respetuosa de
+          los derechos, pensada para el retail, la hotelería y los espacios comerciales. Su enfoque
           combina visión de negocio, precisión legal y sensibilidad creativa: no se trata solo de
           entregar música, sino de redefinir cómo esta mejora la experiencia del cliente y la
           identidad de marca.
@@ -116,9 +115,9 @@ const es: SiteContent = {
           titulares de catálogos saber en todo momento qué música suena en cada establecimiento
           comercial. Para lograrlo, trabaja en alinear a un grupo diverso de actores —titulares de
           contenido, gestores de derechos individuales y colectivos, grandes disqueras, sociedades
-          de gestión colectiva, proveedores de música ambiental y los propios negocios—. El
-          objetivo es construir un sistema con información estructurada que mejore de forma
-          significativa la precisión y la equidad en la distribución de regalías.
+          de gestión colectiva, proveedores de música ambiental y los propios negocios—. El objetivo
+          es construir un sistema con información estructurada que mejore de forma significativa la
+          precisión y la equidad en la distribución de regalías.
         </>
       ),
     },
@@ -132,8 +131,8 @@ const es: SiteContent = {
           role: "CEO",
           achievements: [
             <>
-              Lidero el desarrollo de una plataforma que hace que la música sea legal, asequible y
-              a la medida de la marca de cada negocio.
+              Lidero el desarrollo de una plataforma que hace que la música sea legal, asequible y a
+              la medida de la marca de cada negocio.
             </>,
             <>
               Impulso un modelo pionero de licencia general con un catálogo curado para
@@ -145,6 +144,27 @@ const es: SiteContent = {
             </>,
           ],
           images: [{ src: projectImages.bido, alt: "Proyecto Bido", width: 16, height: 9 }],
+        },
+        {
+          company: "Troly",
+          timeframe: "2026 - Actualidad",
+          role: "Fundador y desarrollador full-stack",
+          achievements: [
+            <>
+              Creé un marketplace y club donde los coleccionistas de diecast catalogan sus autos a
+              escala 1:64, conocen cuánto vale su colección en su propia moneda y publican piezas en
+              venta o cambio.
+            </>,
+            <>
+              Hago crecer la comunidad con un modelo por invitación con lista de espera, campañas de
+              referidos y secuencias de correo automatizadas.
+            </>,
+            <>
+              Desarrollé todo el stack: PWA en React, backend en Node.js + MongoDB, membresías y
+              pagos a vendedores con Stripe, en español, inglés y portugués.
+            </>,
+          ],
+          images: [{ src: projectImages.troly, alt: "Inicio de Troly", width: 16, height: 9 }],
         },
         {
           company: "Catálogo musical propio",
